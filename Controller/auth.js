@@ -4,7 +4,7 @@ import User from "../Models/auth.js";
 export const Sign_IN = async function (req, res, next) {
   const { email, password } = req.body;
   if (!email || !password) {
-    res.status(400).json({
+    res.status(500).json({
       success: false,
       error: "Please Enter Email And Password",
     });
