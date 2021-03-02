@@ -1,6 +1,6 @@
 import ErrorResponse from "../Utils/errorResponse.js";
 export default function (err, req, res, next) {
-  console.log("Err===>", err);
+  // console.log("Err===>", err);
   let error = { ...err };
   error.message = err.message;
   //   Duplicate Handler
