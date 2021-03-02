@@ -1,30 +1,26 @@
 // Import Modal
 import User from "../Models/auth.js";
+import ErrorResponse from "../Utils/errorResponse.js";
 
 export const Sign_IN = async function (req, res, next) {
   const { email, password } = req.body;
   if (!email || !password) {
-    res.status(500).json({
-      success: false,
-      error: "Please Enter Email And Password",
-    });
+    return next(new ErrorResponse("Please Provide Email And Password"));
   }
   try {
     const user = await User.findOne({ email }).select("+password");
 
     if (!user) {
-      res.status(400).json({ success: false, error: "Invalid  Credentials" });
+      return next(new ErrorResponse("Invalid Credentials"));
     }
     const isMatch = await user.matchPassword(password);
 
     if (!isMatch) {
-      res.status(400).json({ success: false, error: "Invalid  Password" });
+      return next(new ErrorResponse("Invalid Password"));
     }
     res.status(201).json({ success: true });
   } catch (error) {
-    res
-      .status(400)
-      .json({ success: false, error: `Login Error ${error.message}` });
+    next(err);
   }
 };
 // Sign Up
