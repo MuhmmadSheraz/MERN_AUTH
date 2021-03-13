@@ -1,0 +1,15 @@
+try{
+var s_kTb=function(a){a.isAvailable()&&(s_Ia.silk=s_Ia.silk||{},s_Ia.silk.s=s_Ia.silk.s||{},s_Ia.silk.s.sis={ca:a.nx.bind(a)})};s_e("syg9");
+
+s_f();
+
+}catch(e){_DumpException(e)}
+try{
+s_e("sYcebf");
+var s_pXb=function(a){s_M.call(this,a.Ja)};s_m(s_pXb,s_M);s_pXb.kb=s_M.kb;s_pXb.Fa=s_M.Fa;s_pXb.prototype.isAvailable=function(){return!0};s_pXb.prototype.nx=function(a){var b=void 0===a?{}:a,c=b.uka;a=b.$Ha;b=b.p5;void 0!==c?s_Qv({serviceName:"sis",methodName:"ca"}):s_Qv({serviceName:"sis",methodName:"caar"});a:switch(b){case 0:b="https://accounts.google.com/ServiceLogin";break a;default:b="https://accounts.google.com/AccountChooser"}c=s_$b(b,{hl:s_Up(),"continue":c||s_ti().toString()});s_Db(c,a)};
+s_8i(s_eya,s_pXb);
+
+s_f();
+
+}catch(e){_DumpException(e)}
+// Google Inc.
